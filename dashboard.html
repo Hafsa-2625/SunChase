@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunChase Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="weather.png" alt="SunChase Logo" class="logo-img">
+            <h2>SunChase</h2>
+        </div>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="table.html">Tables</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Enter city name">
+                <button class="search-button">Search</button>
+                <button id="geolocation-button">Use My Location</button>
+            </div>
+
+            <div class="unit-toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="unit-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span id="unit-display">°F</span>
+            </div>
+            
+            <div class="user-profile">
+                <img src="user.png" alt="User Profile" class="profile-img">
+                
+            </div>
+        </div>
+
+        <div id="loading-spinner" class="spinner" style="display: none;"></div>
+
+        <div id="error-message" style="display: none;"></div>
+
+
+        <div id="weather-widget" class="weather-widget-container">
+            <h3 id="city-name"></h3>
+            <img id="weather-icon" alt="Weather Icon" style="display: none;">
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+            <p id="weather-description"></p>
+        </div>
+        
+
+        
+
+        <div id="charts-container">
+            <div class="chart-item">
+                <canvas id="temperatureBarChart"></canvas>
+            </div>
+            <div class="chart-item">
+                <canvas id="weatherDoughnutChart"></canvas>
+            </div>
+            <div class="chart-item">
+                <canvas id="temperatureLineChart"></canvas>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light sky blue background */
+    color: #333; /* Dark gray for text */
+}
+
+h3, h4, p {
+    margin: 0;
+    padding: 5px;
+    color: #1a1a1a; /* Almost black for readability */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #93c1ea; /* Pure white for clean contrast */
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar .logo-img {
+    width: 40%; /* Responsive logo */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0b5087; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+}
+.weather-widget-container {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+.weather-sunny {
+    background-image: url('sunny.jpg'); /* Replace with your sunny weather background image */
+}
+
+.weather-cloudy {
+    background-image: url('cloudy.jpg'); /* Replace with your cloudy weather background image */
+}
+
+.weather-rainy {
+    background-image: url('rainy.jpg'); /* Replace with your rainy weather background image */
+}
+
+.weather-snowy {
+    background-image: url('snowy.jpg'); /* Replace with your snowy weather background image */
+}
+
+.weather-overcast-clouds {
+    background-image: url('overcast-clouds.jpg'); /* Replace with an appropriate image for overcast clouds */
+}
+
+
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px; /* Leave space for the sidebar */
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: #007BFF; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 50px; 
+    border-radius: 25%; 
+}
+
+.table-section {
+    display: flex;
+    margin-top: 20px;
+}
+
+.data-table {
+    flex: 2;
+    margin-right: 30px; /* Space between table and chatbot */
+    color: white;
+}
+
+.forecast-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-day {
+    background-color: #c1bcd5; /* Light blue background for each day */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center; /* Center align text */
+}
+
+.chatbot {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bar {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat-input {
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-output {
+    background-color: #f1f1f1; /* Light gray for chat output */
+    padding: 10px;
+    border-radius: 5px;
+    height: 150px; /* Fixed height for chat output */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+/* Error Message */
+#error-message {
+    margin-top: 10px;
+    color: red; /* Red color for error messages */
+}
+
+#charts-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.chart-item {
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Geolocation Button */
+#geolocation-button {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#geolocation-button:hover {
+    background-color: #45a049;
+}
+
+/* Weather Widget Animation */
+#weather-widget {
+    transition: all 0.3s ease;
+}
+
+#weather-widget:hover {
+    transform: scale(1.05);
+}
+
+/* Forecast Animation */
+.forecast-day {
+    transition: all 0.3s ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Chart Container Animation */
+.chart-item {
+    transition: all 0.3s ease;
+}
+
+.chart-item:hover {
+    transform: scale(1.02);
+}
+
+/* Default widget background */
+.main-content {
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+/* Clear sky */
+.clear {
+    background-image: url('clear-sky.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Cloudy */
+.clouds {
+    background-image: url('cloudy.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Rainy */
+.rain {
+    background-image: url('rain.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Snowy */
+.snow {
+    background-image: url('snow.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Thunderstorm */
+.thunderstorm {
+    background-image: url('thunderstorm.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Mist, fog, haze */
+.mist {
+    background-image: url('mist.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Default weather background */
+.default-weather {
+    background-color: #37b6dc;
+}
+
+
+/* Forecast Table Styles */
+#forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgb(196, 211, 249);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: black;
+}
+
+#forecast-table th, #forecast-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+#forecast-table th {
+    background-color: #efd8b3;
+    font-weight: bold;
+    color: #333;
+}
+
+#forecast-table tr:nth-child(even) {
+    background-color: rgb(196, 211, 249);
+}
+
+#forecast-table tr:hover {
+    background-color: #dfe1f1;
+}
+
+/* Pagination Styles */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pagination button:hover {
+    background-color: #0056b3;
+}
+
+#pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#page-info {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #forecast-table {
+        font-size: 14px;
+    }
+
+    #forecast-table th, #forecast-table td {
+        padding: 8px;
+    }
+
+    #pagination button {
+        padding: 6px 12px;
+    }
+}
